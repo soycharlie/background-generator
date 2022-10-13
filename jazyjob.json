@@ -105052,29 +105052,6 @@
         "parent": "RQxc1rHc",
         "id": "ThZ1AeTg"
       },
-      "KIxGO3vu": {
-        "id": "KIxGO3vu",
-        "name": "jobGroup",
-        "scope": "global",
-        "resourceID": "fUDUIB8_Bmy_B01dMz2YT",
-        "type": "query",
-        "variant": "lazyQuery",
-        "args": {
-          "fetchPolicy": "cache-first",
-          "errorPolicy": "none",
-          "skip": false,
-          "notifyOnNetworkStatusChange": false,
-          "pollInterval": 0,
-          "transformer": "// return formatData(data).filter(row => row.quantity > 20)\nreturn data",
-          "body": "query jobGroup($id:ID!) {\n  jobGroup(id: $id) {\n    id\n    name\n    jobs {\n      items {\n        id\n        status\n        ref_no\n        title\n        company\n        state\n        city\n        postal_code\n        bid{\n          count\n          items{\n            id\n            publisher{\n              id\n              name\n            }\n          }\n        }\n      }\n      count\n    }\n  }\n}\n",
-          "context": {
-            "headers": {}
-          },
-          "variables": {},
-          "onCompleted": "selectedJobGroup.setValue(data?.jobGroup ?? {})\r\njobGroupJobs.setValue(data?.jobGroup?.jobs?.items ?? [])"
-        },
-        "isSaved": true
-      },
       "F7Flsg98": {
         "id": "F7Flsg98",
         "arguments": [
@@ -109530,6 +109507,6 @@
       }
     }
   },
-  "appVersion": "0.1.53.825",
+  "appVersion": "0.1.53.827",
   "schemaDSLVersion": "0.17.2"
 }
